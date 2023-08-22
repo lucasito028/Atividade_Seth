@@ -2,21 +2,15 @@
 package atividade_21_08;
 
 
-abstract public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends Conta{
 
     
     public ContaPoupanca(double saldo) {
         super(saldo);
     }
 
-    void sacar(double n) {
-        this.saldo -= n;
+     public double sacar(double valor) {
+         return this.saldo -= valor;
     }
-        
-
-    void depositar(double n) {
-       this.saldo += n;
-    }
-
     
 }

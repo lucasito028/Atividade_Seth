@@ -1,7 +1,6 @@
 package atividade_21_08;
 
 
-
 abstract class Conta {
     
     protected double saldo;
@@ -10,8 +9,14 @@ abstract class Conta {
         this.saldo = saldo;
     }
     
-    abstract void sacar(double n);
+    abstract double sacar(double valor);
     
-    abstract void depositar(double n);
+    public double depositar(double valor){
+        return this.saldo += valor;
+    }
+    
+    public void obterSaldo() {
+        System.out.println("Saldo é: " + this.saldo);
+    }
             
 }

@@ -8,18 +8,14 @@ public class ContaCorrente extends Conta implements Tributavel{
     }
 
 
-    void sacar(double n) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double sacar(double valor) {
+         return this.saldo -= (valor * 1.01);
     }
 
-    @Override
-    void depositar(double n) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public double calculaTributos(double valor) {
+    public double calculaTributos(double valor_tributo) {
         
-        return 0;
+        return this.saldo * (valor_tributo / 100);
+        
         
     }
     
