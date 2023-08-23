@@ -11,10 +11,12 @@ abstract class Conta {
     
     abstract double sacar(double valor);
     
+    //Todos as classes podem sacar já que é a mesma coisa
     public double depositar(double valor){
         return this.saldo += valor;
     }
     
+    //Todos as classes podem obter seus saudo 
     public void obterSaldo() {
         System.out.println("Saldo é: " + this.saldo);
     }

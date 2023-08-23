@@ -9,12 +9,16 @@ public class ContaCorrente extends Conta implements Tributavel{
 
 
     public double sacar(double valor) {
-         return this.saldo -= (valor * 1.01);
+        double p = calculaTributos(valor);
+        return this.saldo -= p;
     }
 
     public double calculaTributos(double valor_tributo) {
         
-        return this.saldo * (valor_tributo / 100);
+        System.out.println("Valor do desconto: " + valor_tributo);
+        System.out.println("Valor do Tributo: " + valor_tributo / 100);
+        
+        return valor_tributo * 1.01;
         
         
     }
