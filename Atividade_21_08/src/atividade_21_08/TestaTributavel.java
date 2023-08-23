@@ -19,23 +19,26 @@ public class TestaTributavel {
         
         //Sobre Conta Corrente
             System.out.println("\n\nConta Corrente");
-            ContaCorrente corrente = new ContaCorrente(1500);
+            ContaCorrente corrente = new ContaCorrente(1000);
             corrente.obterSaldo();
             
-            double parametro_c = corrente.depositar(1000);
+            double parametro_c = corrente.depositar(3000);
             corrente.obterSaldo();
             
             parametro_c = corrente.sacar(1000);
             corrente.obterSaldo();
+            double p = corrente.calculaTributos(corrente.saldo);
             
             
         //Sobre Seguro de Vida
             System.out.println("\n\nSeguro de Vida");
-            Seguro_vida segurovida = new Seguro_vida();
-            double total = segurovida.calculaTributos(1000);
+            SegurodeVida segurovida = new SegurodeVida();
+            double total = segurovida.calculaTributos(corrente.saldo);
             System.out.println("Agora com Desconto: " + total);
             
              
             
     }
 }
+
+

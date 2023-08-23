@@ -9,7 +9,9 @@ abstract class Conta {
         this.saldo = saldo;
     }
     
-    abstract double sacar(double valor);
+    public double sacar(double valor) {
+        return this.saldo -= valor;
+    }
     
     //Todos as classes podem sacar já que é a mesma coisa
     public double depositar(double valor){
@@ -22,3 +24,4 @@ abstract class Conta {
     }
             
 }
+

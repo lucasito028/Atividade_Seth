@@ -7,20 +7,16 @@ public class ContaCorrente extends Conta implements Tributavel{
         super(saldo);
     }
 
-
-    public double sacar(double valor) {
-        double p = calculaTributos(valor);
-        return this.saldo -= p;
+    public double calculaTributos(double valor) {
+        
+        
+        System.out.println("Agora valor com a Tributação Descontando: "+ (this.saldo / 100));
+        this.saldo -= (this.saldo / 100);
+        System.out.println("Valor: " + this.saldo);
+        return this.saldo;
+             
     }
 
-    public double calculaTributos(double valor_tributo) {
-        
-        System.out.println("Valor do desconto: " + valor_tributo);
-        System.out.println("Valor do Tributo: " + valor_tributo / 100);
-        
-        return valor_tributo * 1.01;
-        
-        
-    }
-    
+
 }
+
