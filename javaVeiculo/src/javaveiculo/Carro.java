@@ -4,7 +4,7 @@ package javaveiculo;
 
 public class Carro extends Veiculo{
     
-    private int marcha;
+    int marcha;
     
     public Carro(String modelo, float velocidade, int passageiro, float combustivel) {
         super(modelo, velocidade, passageiro, combustivel);
@@ -19,15 +19,15 @@ public class Carro extends Veiculo{
         marcha = 1;
     }
     
-    else if(velocidade > 20 && velocidade < 40){
+    else if(velocidade >= 20 && velocidade < 40){
         marcha = 2;
     }
     
-    else if(velocidade > 40 && velocidade < 60){
+    else if(velocidade >= 40 && velocidade < 60){
         marcha = 3;
     }
     
-    else if(velocidade > 60 && velocidade < 70){
+    else if(velocidade >= 60 && velocidade < 70){
         marcha = 4;
     }
     

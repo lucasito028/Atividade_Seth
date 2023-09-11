@@ -22,6 +22,29 @@ public class JavaVeiculo {
         System.out.println("Velocidade :" + corsa.velocidade);
         System.out.println("Passageiros :" + corsa.passageiro);
         System.out.println("Combustivel :" + corsa.combustivel);
+
+        System.out.println("Acelerando");
+
+        int a = 0;
+
+        for(a = 0; a <= 10; a++){
+            corsa.acelerar();
+
+            System.out.println("Marcha :" + corsa.marcha);
+            System.out.println("Velocidade :" + corsa.getVelocidade());
+        }
+
+        System.out.println("Desacelerar");
+
+        int b = 10;
+
+        while(b != 0){
+            corsa.freiar();
+
+            System.out.println("Marcha :" + corsa.marcha);
+            System.out.println("Velocidade :" + corsa.getVelocidade());
+            b--;
+        }
         
         
     }
